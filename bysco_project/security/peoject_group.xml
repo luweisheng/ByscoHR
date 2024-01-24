@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="bysco20231230_project_category" model="ir.module.category">
+            <field name="name">佰事可项目权限</field>
+            <field name="description">佰事可项目权限</field>
+            <field name="sequence">13</field>
+        </record>
+
+        <record id="bysco_demand_analysis" model="res.groups">
+            <field name="name">提交需求评估</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_task_distribution" model="res.groups">
+            <field name="name">任务派发</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_accept_an_assignment" model="res.groups">
+            <field name="name">接受任务</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_submit_code" model="res.groups">
+            <field name="name">提交代码</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_begin_testing" model="res.groups">
+            <field name="name">开始测试</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_pass_test" model="res.groups">
+            <field name="name">测试通过</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_failed_test" model="res.groups">
+            <field name="name">测试失败</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_reappraise" model="res.groups">
+            <field name="name">重新评估</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="bysco_bysco_delete_test" model="res.groups">
+            <field name="name">测试记录删除</field>
+            <field name="category_id" ref="bysco_project.bysco20231230_project_category"/>
+        </record>
+
+        <record id="base.default_user" model="res.users">
+            <field name="groups_id"
+                   eval="[(4,ref('bysco_demand_analysis')),
+                   (4,ref('bysco_task_distribution')),
+                   (4,ref('bysco_accept_an_assignment')),
+                   (4,ref('bysco_submit_code')),
+                   (4,ref('bysco_submit_code')),
+                   (4,ref('bysco_begin_testing')),
+                   (4,ref('bysco_pass_test')),
+                   (4,ref('bysco_failed_test')),
+                   (4,ref('bysco_bysco_delete_test')),
+                   (4,ref('bysco_reappraise'))
+                   ]"/>
+        </record>
+
+    </data>
+</odoo>

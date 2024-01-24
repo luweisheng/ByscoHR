@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bysco_task_allocation_detail,bysco_task_allocation_detail,model_bysco_task_allocation_detail,,1,1,1,0
+access_bicycle_task_test_record,bicycle_task_test_record,model_bicycle_task_test_record,,1,1,1,0
+access_bicycle_project_reject,bicycle_project_reject,model_bicycle_project_reject,,1,1,1,0
+access_bysco_job_type,bysco_job_type,model_bysco_job_type,,1,1,1,0
+access_bysco_job_details,bysco_job_details,model_bysco_job_details,,1,1,1,0

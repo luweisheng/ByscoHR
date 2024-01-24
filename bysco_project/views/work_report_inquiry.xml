@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        工作情况查询form视图-->
+        <record id="work_report_inquiry_form" model="ir.ui.view">
+            <field name="name">工作情况查询</field>
+            <field name="model">bysco.work.report.inquiry</field>
+            <field name="arch" type="xml">
+                <form string="工作情况查询">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="user_ids" widget="many2many_tags"/>
+                                <field name="department_ids" widget="many2many_tags"/>
+<!--                                <field name="work_state"/>-->
+                            </group>
+                            <group>
+                                <field name="time_horizon"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="工作情况">
+                                <field name="work_report_inquiry_line_ids">
+                                    <tree string="工作情况查询" editable="bottom" create="0" delete="0">
+                                        <field name="user_id"/>
+                                        <field name="department"/>
+                                        <field name="task_count"/>
+<!--                                        跳转任务tree视图，icon为跳转图标-->
+                                        <button name="tasks_work_tree" type="object" icon="fa-send" class="btn" string="查看详情"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="work_report_inquiry_action" model="ir.actions.act_window">
+            <field name="name">工作情况查询</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bysco.work.report.inquiry</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_work_report_inquiry"
+                  name="所有部门工作查询"
+                  action="work_report_inquiry_action"
+                  parent="project.menu_project_report"
+                  sequence="11"/>
+
+
+    </data>
+</odoo>

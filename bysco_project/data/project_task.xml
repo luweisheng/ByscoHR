@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="bysco_job_code_order" model="ir.sequence">
+            <field name="name">工作任务</field>
+            <field name="code">job.code</field>
+            <field name="prefix">%(y)s%(month)s</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="bysco_merge_purchase_order" model="ir.sequence">
+            <field name="name">项目任务编号</field>
+            <field name="code">project.task</field>
+            <field name="prefix">%(y)s%(month)s</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="job_type_06" model="bysco.job.type">
+            <field name='name'>解决客户问题</field>
+            <field name='code'>JJKHWT</field>
+        </record>
+
+        <record id="job_type_10" model="bysco.job.type">
+            <field name='name'>需求开发</field>
+            <field name='code'>XQKF</field>
+        </record>
+
+        <record id="job_type_01" model="bysco.job.type">
+            <field name='name'>代码测试</field>
+            <field name='code'>DMCS</field>
+        </record>
+
+        <record id="job_type_02" model="bysco.job.type">
+            <field name='name'>公司会议</field>
+            <field name='code'>HY</field>
+        </record>
+
+        <record id="job_type_03" model="bysco.job.type">
+            <field name='name'>系统培训</field>
+            <field name='code'>XTPX</field>
+        </record>
+
+        <record id="job_type_04" model="bysco.job.type">
+            <field name='name'>需求分析</field>
+            <field name='code'>XQFX</field>
+        </record>
+
+        <record id="job_type_05" model="bysco.job.type">
+            <field name='name'>协助同事</field>
+            <field name='code'>XZTS</field>
+        </record>
+
+        <record id="job_type_07" model="bysco.job.type">
+            <field name='name'>升级系统</field>
+            <field name='code'>XTSJ</field>
+        </record>
+
+        <record id="job_type_11" model="bysco.job.type">
+            <field name='name'>拜访客户</field>
+            <field name='code'>BFKH</field>
+        </record>
+
+        <record id="job_type_08" model="bysco.job.type">
+            <field name='name'>写报告</field>
+            <field name='code'>XBG</field>
+        </record>
+
+        <record id="job_type_09" model="bysco.job.type">
+            <field name='name'>其他事项</field>
+            <field name='code'>QT</field>
+        </record>
+
+        <record id="job_type_12" model="bysco.job.type">
+            <field name='name'>需求分析</field>
+            <field name='code'>XQFX</field>
+        </record>
+
+        <record id="job_type_13" model="bysco.job.type">
+            <field name='name'>需求评估</field>
+            <field name='code'>XQPG</field>
+        </record>
+
+        <record id="job_type_14" model="bysco.job.type">
+            <field name='name'>代码审核</field>
+            <field name='code'>DMSH</field>
+        </record>
+
+    </data>
+</odoo>
